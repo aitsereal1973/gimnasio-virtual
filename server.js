@@ -9,7 +9,8 @@ const io = socketIo(server);
 
 mongoose.connect('mongodb://localhost/gimnasioVirtual', {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  family: 4 // Use IPv4
 })
 .then(() => console.log('Base de datos conectada'))
 .catch(err => console.log(err));
