@@ -12,7 +12,9 @@ const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost/gimnasioVirtual
 mongoose.connect(mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  family: 4 // Use IPv4
+  family: 4, // Use IPv4
+  serverSelectionTimeoutMS: 5000, // Keep trying to send operations for 5 seconds
+  socketTimeoutMS: 45000 // Close sockets after 45 seconds of inactivity
 })
 .then(() => console.log('Base de datos conectada'))
 .catch(err => console.log(err));
