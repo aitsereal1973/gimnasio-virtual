@@ -1,0 +1,21 @@
+{
+  "name": "gimnasio-virtual",
+  "version": "1.0.0",
+  "description": "Aplicación para gestionar rutinas de ejercicios",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "client": "npm start --prefix client",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9",
+    "socket.io": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "author": "Tu Nombre",
+  "license": "MIT"
+}
