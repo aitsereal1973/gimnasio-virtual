@@ -7,7 +7,9 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
 
-mongoose.connect('mongodb://localhost/gimnasioVirtual', {
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost/gimnasioVirtual';
+
+mongoose.connect(mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   family: 4 // Use IPv4
